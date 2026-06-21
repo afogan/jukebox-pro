@@ -20,3 +20,9 @@ CREATE TABLE playlists_tracks (
   track_id integer NOT NULL REFERENCES tracks(id) ON DELETE CASCADE,
   UNIQUE (playlist_id, track_id)
 );
+
+CREATE TABLE users (
+  id serial PRIMARY KEY,
+  username text UNIQUE NOT NULL,
+  password text NOT NULL
+);
